@@ -1,0 +1,18 @@
+module top;
+  integer x;
+   initial begin
+         x=11;
+        disp(x); //task calling or task using time=11
+		 x=200;
+		disp(x);
+		  x=1000;
+		disp(x);
+	 end
+
+   task disp(input reg[9:0] a);  
+     begin
+	     #a;
+		 $display("time=%0d",$time);
+	 end
+   endtask
+endmodule 
