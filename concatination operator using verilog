@@ -1,0 +1,13 @@
+module top;
+   reg[7:0]a;
+    initial $display("%b",{10'b1010101010,5'b11111});//101010101011111
+	//replication;
+
+initial begin
+   //a=8'b1111_1111;
+   a={8{1'b1}};
+   $display("%b",a); //1111_1111
+   a={  {4{1'b1}},   {4{1'b0}}  };
+   $display("%b",a); //1111_0000
+end
+endmodule 
