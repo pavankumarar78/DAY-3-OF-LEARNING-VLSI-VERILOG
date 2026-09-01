@@ -1,0 +1,27 @@
+module nbitcomp(a,b,g,l,e);
+  parameter N=10;
+  input [N-1:0]a,b;
+  output g,l,e;
+   assign g=a>b,
+          l=a<b,
+		  e=a==b;
+endmodule 
+
+module top;
+parameter X=20;
+
+   reg[X-1:0]a,b;
+   wire g,l,e;
+
+nbitcomp #(.N(X)) dut(a,b,g,l,e);
+    initial begin
+	  repeat(5)begin
+	   {a,b}={$random,$random};
+	   #1;
+	   $display("a=%0d b=%0d g=%b l=%b e=%b",a,b,g,l,e);
+	end
+	end
+
+
+endmodule 
+
