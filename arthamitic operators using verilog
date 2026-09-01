@@ -1,0 +1,13 @@
+module top;
+  integer a,b,c;
+   initial $display("sum of 30 and 40 and 500 is %0d",30+40+500);
+   initial $display(" 30 and 40 and 500 %0d",30-40-500);
+   initial $display(" 30 and 40 and 500 %0d",30*40*500);
+   initial $display(" 30 and 40 and 500 %0f",500.0/40.0/5.0);
+   initial begin
+      a=500;
+	  b=40;
+	  c=500%40;
+      $display(" 30 and 40 and 500 %0d",c); //20
+	end
+endmodule 
