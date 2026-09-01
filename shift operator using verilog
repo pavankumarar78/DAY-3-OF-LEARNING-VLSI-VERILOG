@@ -1,0 +1,16 @@
+module top;
+     reg [4:0]a;
+	 initial begin
+	     a=5'b10100;
+
+		 a=a<<2;  //10100|00
+		 $display("a=%b",a); //00_100_00
+
+		 $display("a=%b",a); //10000
+         $display("%b",a>>2);//10000 => 00100  
+
+
+
+	 end
+endmodule 
+   
