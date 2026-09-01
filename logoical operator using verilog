@@ -1,0 +1,23 @@
+module top;
+    reg[4:0]a,b;
+	reg c;
+	initial begin
+	    a=5'b101x;
+		b=5'b10xx;
+        c=a&&b;
+		$display("%b",c); //1
+
+		b=5'b00xx; //x  a=1 b=x;
+        c=a&&b;
+		$display("%b",c); //x
+        c=a||b; //a=1 b=x
+		$display("%b",c); //1
+
+		c=!b; //b=x
+		$display("%b",c); //x
+
+        b='bz;
+		c=!b;
+		$display("%b",c); //x
+	end
+endmodule 
