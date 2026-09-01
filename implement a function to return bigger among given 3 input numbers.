@@ -1,0 +1,20 @@
+ module top;
+	    function integer big(input integer a,b,c);
+		   begin
+		      if(a>b && a>c) big=a;
+			  else if(b>a && b>c)  big=b;
+			  else big=c;
+		   end
+		endfunction
+	initial  $display("big number within 500 100 and 150 is =%0d",big(500,100,150));
+	task big_task(input integer a,b,c , output integer x);
+      begin
+		      if(a>b && a>c) x=a;
+			  else if(b>a && b>c)  x=b;
+			  else x=c;
+		   end
+
+	endtask
+
+	 endmodule 
+
