@@ -1,0 +1,30 @@
+module top;
+  reg x;
+  integer i;
+  task fibonocci_check(input integer a,output reg x);
+    integer num1,num2,num3;
+    begin
+	  num1=0;
+	  num2=1;
+	   for(i=0;i<20;i=i+1)begin
+	       $display("num1=%0d num2=%0d num3=%0d",num1,num2,num3);
+	        num3=num1+num2;
+			if(num3==a) begin
+			   x=1;
+			    i=20;
+			end
+			else x=0;
+			num2=num1;
+			num1=num3;
+	   end
+    end
+
+endtask
+   initial begin
+      fibonocci_check(20,x);
+	    if(x==1) $display("present");
+		else $display("not present");
+   end
+
+
+endmodule 
