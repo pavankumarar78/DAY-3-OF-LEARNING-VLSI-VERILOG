@@ -1,0 +1,16 @@
+module top;
+   reg[4:0]a,b;
+
+   initial begin
+       a=5'b10x01;
+	   b=5'b10111;
+
+	   $display("bitwise and %b",a&b); //10x01 & 10111 =>10x01
+	   $display("bitwise or %b",a|b); //10x01 | 10111 =>10111
+	   $display("bitwise xor %b",a^b); //10x01 | 10111 =>00x10
+	   $display("bitwise xnor %b",a~^b); //10x01 | 10111 =>11x01
+	   $display("bitwise nand %b",~(a&b)); //10x01 & 10111 =>01x10
+	   $display("bitwise nor %b",~(a|b)); //10x01 & 10111 =>01000
+   end
+endmodule 
+  
