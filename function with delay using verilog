@@ -1,0 +1,19 @@
+module top;
+  integer x;
+  reg y;
+   initial begin
+         x=11;
+       y= disp(x); 
+		 x=200;
+		y=disp(x);
+		  x=1000;
+		y=disp(x);
+	 end
+
+   function disp(input reg[9:0] a);  
+     begin
+	     //#a;
+		 $display("time=%0d",$time);
+	 end
+   endfunction
+endmodule 
