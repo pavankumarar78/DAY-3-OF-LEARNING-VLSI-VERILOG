@@ -1,0 +1,9 @@
+module top;
+   	initial begin
+		$display(" 20>29 = %b",20>29); //0
+		$display(" 20<29 = %b",20<29); //1
+		$display(" 20<29 = %b",20<29>30); //0
+		$display(" 20>=29 = %b",20>=29); //0
+		$display(" 29>=29 = %b",29>=29<20); //1
+	end
+endmodule 
